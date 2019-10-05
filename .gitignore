@@ -40,3 +40,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# npm/yarn error/lock files
+yarn-error.log
+package-lock.json
+yarn.lock
