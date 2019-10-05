@@ -26,6 +26,7 @@ import { TemplateComponent } from './template/template.component';
       markedOptions: {
         provide: MarkedOptions,
         useValue: {
+          renderer: new MarkedRenderer(),
           gfm: true,
           tables: true,
           breaks: false,
