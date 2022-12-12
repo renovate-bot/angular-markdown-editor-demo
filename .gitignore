@@ -25,6 +25,7 @@
 !.vscode/extensions.json
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
@@ -40,3 +41,20 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Distribution/Demo folders
+dist/
+docs/
+
+# Tests Report & Coverage
+**/node_modules
+**/coverage
+**/jest-coverage
+**/dist
+**/*.tgz
+**/junit.xml
+**/test-report.xml
+**/testresult.xml
+
+# Node Version Manager files
+.naverc

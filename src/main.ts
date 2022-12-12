@@ -8,5 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { preserveWhitespaces: true }) // preserveWhitespaces is now default to False since Angular 6
+  .catch((err: any) => console.log(err));

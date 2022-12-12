@@ -10,15 +10,24 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2015",
+    "target": "es2020",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "typings"
     ],
     "lib": [
       "es2017",
       "dom"
     ],
-    "module": "esnext",
-    "baseUrl": "./"
+    "module": "es2020",
+    "baseUrl": "./",
+    "paths": {
+      "stream": [ "./node_modules/stream-browserify" ]
+    },
+    "strict": true
+  },
+  "angularCompilerOptions": {
+    "preserveWhitespaces": true,
+    "strictMetadataEmit": true
   }
 }

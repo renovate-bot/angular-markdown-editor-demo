@@ -9,11 +9,11 @@ import { EditorInstance, EditorLocale, EditorOption } from 'angular-markdown-edi
   styleUrls: ['./template.component.scss']
 })
 export class TemplateComponent implements OnInit {
-  bsEditorInstance: EditorInstance;
-  markdownText: string;
+  bsEditorInstance!: EditorInstance;
+  markdownText = '';
   showEditor = true;
-  templateForm: FormGroup;
-  editorOptions: EditorOption;
+  templateForm!: FormGroup;
+  editorOptions!: EditorOption;
   locale: EditorLocale = {
     language: 'fr',
     dictionary: {
@@ -45,7 +45,7 @@ export class TemplateComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private markdownService: MarkdownService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.editorOptions = {
@@ -77,8 +77,12 @@ function hello() {
     this.buildForm(this.markdownText);
   }
 
+  onChange(e: any) {
+    // for example show textarea new body content
+    // console.log(e.getContent());
+  }
 
-  buildForm(markdownText) {
+  buildForm(markdownText: string) {
     this.templateForm = this.fb.group({
       body: [markdownText],
       isPreview: [true]
@@ -106,7 +110,7 @@ function hello() {
   }
 
   parse(inputValue: string) {
-    const markedOutput = this.markdownService.compile(inputValue.trim());
+    const markedOutput = this.markdownService.parse(inputValue.trim());
     this.highlight();
 
     return markedOutput;
