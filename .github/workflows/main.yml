@@ -54,4 +54,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./bootstrap4-demo-with-translate/dist
+          publish_dir: ./dist
