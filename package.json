@@ -47,7 +47,7 @@
     "conventional-changelog": "^3.1.25",
     "custom-event-polyfill": "^1.0.7",
     "eslint": "^8.29.0",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "sass": "^1.56.2",
     "ts-node": "^10.9.1",
